@@ -4,7 +4,7 @@
 ![Orange Workflow](screenshots/orange-workflow.png)
 
 ### Model Performance Comparison
-![Model Comparison](screenshots/model-comare.png)
+![Model Comparison](screenshots/model compare.png)
 
 ### Two Clusters Presented by PowerBI
-![Python Validation](screenshots/python-PowerBI3.png)Project screenshots
+![Two Clusters](screenshots/powerBI3.png)Project screenshots
