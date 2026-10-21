@@ -1,4 +1,3 @@
-
 # Model Evaluation AI Skill – Testing and Iteration
 
 ## Project Objective
@@ -77,19 +76,70 @@ The AI maintained Logistic Regression as the provisional recommendation while re
 5. Clear analytical instructions improve the consistency and usefulness of AI outputs.
 6. Successful instruction-based tests do not replace independent model validation.
 
+
 ## Current Status and Limitations
 
-**Completed:**
-- Reusable Skill instruction file
-- Two manual evaluation tests
-- Sampling-context clarification
-- Evaluation of AI-generated recommendations
+### Completed
 
-**Not Yet Completed:**
-- Automatic Skill discovery and invocation in an Agent runtime
-- MCP tool integration
-- Automated regression testing
-- Production deployment
+- Developed a reusable Model Evaluation AI Skill using SKILL.md.
+- Completed two rounds of manual Skill testing and iterative improvement.
+- Improved the Skill to distinguish original class prevalence from balanced modelling samples.
+- Configured a filesystem MCP server using Visual Studio Code, Node.js, and GitHub Copilot.
+- Successfully connected the MCP server to aggregated model evaluation data stored in JSON format.
+- Verified actual MCP tool calls using `read_text_file`.
+- Tested the combined workflow using MCP data retrieval and reusable Skill instructions.
+- Confirmed that the AI assistant could access SKILL.md from the workspace and apply its model evaluation guidance.
+- Generated business-oriented model comparisons and recommendations.
+- Verified that MCP filesystem access restrictions prevented unauthorized directory access.
+
+### MCP Integration Test Results
+
+**MCP Server:** insurance-model-metrics
+
+**Data Source:** examples/model_metrics.json
+
+**Tools Successfully Used:**
+- read_text_file
+- list_allowed_directories
+- directory_tree
+
+**Results:**
+
+The AI assistant successfully retrieved aggregated machine learning evaluation metrics through the MCP filesystem server.
+
+It also accessed the reusable Model Evaluation Skill instructions and generated a structured comparison of Decision Tree, Logistic Regression, and Neural Network models.
+
+The output included model performance comparisons, class imbalance considerations, business recommendations, and validation limitations.
+
+### Security and Access Control
+
+The MCP server was configured to access only the authorized `examples` directory.
+
+During testing, an attempt to read SKILL.md outside the authorized MCP directory was denied.
+
+The AI assistant subsequently accessed SKILL.md through the editor's workspace file-reading capability without expanding the MCP server's permissions.
+
+This demonstrated the importance of scoped tool access and appropriate separation of responsibilities.
+
+### Not Yet Completed or Fully Verified
+
+- The specific automatic Skill discovery mechanism has not been independently verified, although the assistant accessed SKILL.md during testing without the Skill being explicitly named.
+- Automated regression testing across multiple datasets and scenarios.
+- Integration with live enterprise databases or APIs.
+- Production deployment and operational monitoring.
+
+### Final Project Status
+
+**Status: Functional Local Prototype**
+
+The reusable AI Skill and MCP filesystem integration have been successfully tested in a local VS Code environment.
+
+The prototype demonstrates a build-test-improve workflow involving reusable AI instructions, tool integration, iterative evaluation, business interpretation, and human oversight.
+
+No confidential customer records were used in the MCP demonstration.
+
+The project is intended for learning and portfolio demonstration rather than production deployment.
+
 
 This project demonstrates an initial build-test-improve workflow for reusable AI instructions.
 
