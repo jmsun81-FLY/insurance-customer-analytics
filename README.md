@@ -1,336 +1,403 @@
-# Insurance Customer Analytics: Predictive Modelling & Customer Segmentation
 
-### MBA Business Analytics Project | Brock University | 2026
+# Insurance Customer Analytics
+### Machine Learning, Reusable AI Skills & MCP Integration
 
-## 1. Project Overview
+**MBA Business Analytics Portfolio | Goodman School of Business, Brock University | 2026**
 
-This academic team project explored how machine learning and business analytics could improve customer targeting and decision-making in the auto insurance industry.
+This portfolio combines an academic machine learning project with a practical AI prototyping extension.
 
-Using approximately 100,000 historical insurance quotation records, our team investigated two key business questions:
+The original team project examined auto insurance quotation conversion using customer segmentation and predictive modelling. I subsequently performed independent Python validation and developed a reusable AI Model Evaluation Skill connected to aggregated model results through the Model Context Protocol (MCP).
 
-1. Which factors are associated with successful conversion of insurance quotations into purchased policies?
-2. How can predictive models and customer segmentation support more efficient customer follow-up and resource allocation?
+The goal is to demonstrate how technical experimentation, business understanding, and responsible AI practices can work together to address real-world analytical challenges.
 
-The project combined data preparation, customer segmentation, predictive modelling, model evaluation, and business recommendations.
+## Project Highlights
 
-In addition to the team-based analysis using Orange, I independently used Python to validate the results of three machine learning models. The Python results were broadly consistent with those obtained in Orange.
+| Area | Highlights |
+|---|---|
+| Business Analytics | 101,891 insurance quotation records |
+| Machine Learning | Decision Tree, Logistic Regression, Neural Network |
+| Customer Segmentation | Three segments using Two-Step Clustering |
+| Python | Independent validation of three model results |
+| Reusable AI Skill | Model evaluation instructions with structured outputs |
+| MCP Integration | VS Code Copilot connected to a filesystem MCP server |
+| Testing | Iterative evaluation and improvement based on feedback |
+| Responsible AI | Scoped data access, privacy protection, human oversight |
 
-**Project Information**
-- Institution: Goodman School of Business, Brock University
-- Program: Master of Business Administration – Business Analytics
-- Course: MBAB 5P11 – Introduction to Business Analytics
-- Year: 2026
-- Project Type: Academic Team Project with Independent Python Validation
+## Quick Links
 
-## 2. Tools and Technologies
-
-**Data Analytics and Machine Learning**
-- **Orange Data Mining:** Model development, parameter tuning, evaluation, and comparison
-- **Python:** Independent validation of machine learning model results
-- **IBM SPSS Statistics:** Statistical analysis and customer segmentation
-- **Microsoft Excel:** Exploratory data analysis and supporting calculations
-
-**Machine Learning Methods**
-- Decision Tree
-- Logistic Regression
-- Neural Network
-- Two-Step Clustering
-
-**Analytical Techniques**
-- Data preprocessing and feature selection
-- Exploratory Data Analysis (EDA)
-- Class imbalance analysis
-- Oversampling and undersampling
-- Cross-validation
-- Hyperparameter tuning
-- Model performance comparison
-- Independent cross-tool validation
-- Business interpretation of analytical results
-
-**Evaluation Metrics**
-- Area Under the ROC Curve (AUC)
-- Classification Accuracy
-- Precision
-- Recall
-- F1 Score
-- Matthews Correlation Coefficient (MCC)
-
-## 3. Business Problem
-
-Insurance companies receive many quotation requests, but only a portion of them become purchased policies.
-
-Treating every quotation as equally likely to convert can lead to inefficient allocation of marketing and customer service resources.
-
-The objective of this project was to evaluate whether data-driven analytical techniques could help identify higher-potential quotations and provide meaningful customer segmentation.
-
-The intended business value was to support more informed follow-up prioritization, differentiated customer engagement, and resource allocation decisions.
-
-## 4. Analytical Workflow
-
-### Step 1: Data Exploration and Preparation
-
-The dataset contained approximately 100,000 insurance quotation records with customer, vehicle, driving, and insurance-related information.
-
-The team explored variable distributions, missing values, potential predictors, and data quality issues.
-
-A significant challenge was class imbalance:
-
-- Approximately 78.12% of quotations were not converted into policies.
-- Approximately 21.88% resulted in purchased policies.
-
-Initial models tended to favor the majority class, limiting their usefulness in identifying potential customers.
-
-To address this issue, different sampling strategies were evaluated, including oversampling and undersampling.
-
-A balanced modelling sample was subsequently used to improve the identification of the minority class.
-
-### Step 2: Customer Segmentation
-
-The team applied Two-Step Clustering to identify meaningful customer groups based on demographic characteristics, driving patterns, vehicle information, and existing insurance relationships.
-
-Multiple clustering specifications were evaluated, including alternative variable combinations and two-, three-, and four-cluster solutions.
-
-The final three-cluster solution was selected based on cluster quality, segment balance, and business interpretability.
-
-The resulting segments demonstrated different quotation conversion patterns, supporting potential improvements in customer engagement strategies.
-
-### Step 3: Predictive Model Development
-
-Three classification models were developed and compared using Orange Data Mining.
-
-**Decision Tree**
-
-The team tested alternative configurations involving:
-
-- Minimum leaf size
-- Minimum split size
-- Maximum tree depth
-- Branching approach
-
-Sixteen configurations were evaluated to identify a suitable balance between model performance, complexity, and interpretability.
-
-**Logistic Regression**
-
-The team examined regularization approaches and different parameter settings.
-
-Lasso (L1) regularization was selected, with a final regularization parameter of C = 0.1.
-
-**Neural Network**
-
-The team experimented with:
-
-- Hidden-layer configurations
-- Activation functions
-- Optimization methods
-
-The objective was to determine whether a more complex model could improve predictive performance compared with simpler classification approaches.
-
-### Step 4: Model Evaluation and Comparison
-
-All three models were evaluated using a consistent cross-validation approach.
-
-Because the original dataset was imbalanced, accuracy alone was insufficient to assess model usefulness.
-
-Particular attention was given to AUC, Recall, Precision, F1 Score, and MCC.
-
-The comparison considered both predictive performance and practical business interpretation.
-
-### Step 5: Independent Validation Using Python
-
-In addition to the modelling completed in Orange, I independently used Python to perform a second validation of the three classification models:
-
-- Decision Tree
-- Logistic Regression
-- Neural Network
-
-The purpose was to cross-check the Orange modelling results using another analytical environment.
-
-The Python validation produced results broadly consistent with those obtained in Orange.
-
-This exercise strengthened my understanding of model evaluation, analytical consistency, and the importance of independently checking results rather than relying on a single tool.
-
-It also reinforced the need to consider differences in data preprocessing, model configuration, and evaluation methods when interpreting results across analytical environments.
-
-## 5. Key Results
-
-### Customer Segmentation Results
-
-The analysis identified three customer segments with different observed quotation conversion rates.
-
-| Segment | Approximate Conversion Rate |
-|---|---:|
-| Segment 1 | 24.8% |
-| Segment 2 | 15.7% |
-| Segment 3 | 22.3% |
-
-The results suggested that existing insurance relationships, customer characteristics, and driving patterns could help inform differentiated follow-up strategies.
-
-### Predictive Model Comparison
-
-The final Orange model comparison produced the following results:
-
-| Model | AUC | Recall | F1 Score |
-|---|---:|---:|---:|
-| Decision Tree | 0.626 | 0.658 | 0.620 |
-| Logistic Regression | 0.634 | 0.652 | 0.618 |
-| Neural Network | 0.633 | 0.646 | 0.616 |
-
-**Recommended Model: Logistic Regression**
-
-Logistic Regression was selected because it provided a competitive balance of predictive performance, stability, and interpretability.
-
-Its AUC of 0.634 was the highest among the compared models.
-
-Although Decision Tree achieved slightly higher Recall and F1 Score, Logistic Regression offered a strong combination of analytical performance and business interpretability.
-
-The independently conducted Python validation produced broadly similar findings.
-
-These results represent academic experimental findings and should not be interpreted as evidence of production-level predictive performance.
-
-## 6. Business Recommendations
-
-The analysis supported three potential business applications.
-
-**1. Prioritize Customer Follow-Up**
-
-Use predictive scores to help identify quotations that may warrant greater attention from sales or customer service teams.
-
-**2. Develop Segment-Based Engagement Strategies**
-
-Tailor follow-up approaches to different customer segments based on observed characteristics and conversion patterns.
-
-**3. Monitor Model Performance**
-
-Review data quality, predictive performance, and changes in customer behaviour before considering operational implementation.
-
-The project emphasized that analytical models should support business judgment rather than automatically determine customer decisions.
-
-## 7. My Technical Contribution
-
-My individual contribution included conducting a secondary validation of the team's three machine learning models using Python.
-
-I used this additional analysis to cross-check the results generated through Orange and evaluate whether the findings were broadly consistent across tools.
-
-This work provided practical experience in:
-
-- Applying Python to machine learning validation
-- Comparing analytical results across different tools
-- Interpreting model performance metrics
-- Evaluating consistency and potential analytical limitations
-- Connecting technical findings with business-oriented recommendations
-
-The broader clustering, model development, and business recommendation activities were completed collaboratively as part of the academic team project.
-
-## 8. Key Lessons Learned
-
-**Data Quality Is Fundamental**
-
-Missing values, feature selection, and class imbalance can significantly influence analytical results.
-
-**Model Evaluation Requires Multiple Metrics**
-
-A model with relatively high accuracy may still perform poorly when identifying an underrepresented target class.
-
-**Independent Validation Is Valuable**
-
-Rechecking machine learning results in Python provided an additional perspective on the consistency of findings obtained in Orange.
-
-**More Complexity Does Not Always Mean Better Performance**
-
-The Neural Network did not significantly outperform Logistic Regression, highlighting the importance of evaluating model complexity against practical benefits.
-
-**Interpretability Matters**
-
-Analytical solutions should be understandable to business stakeholders, particularly when recommendations influence customer engagement and resource allocation.
-
-**Human Judgment Remains Essential**
-
-Model outputs must be interpreted in context, with attention to data limitations, uncertainty, privacy, and responsible analytical practices.
-
-## 9. Relevance to AI Prototyping and Enterprise Technology
-
-Although this project focused on traditional machine learning rather than generative AI agents, the development process involved several principles relevant to AI solution building:
-
-- Understanding and defining a business problem
-- Translating business needs into analytical objectives
-- Experimenting with alternative technical approaches
-- Testing and evaluating outputs
-- Performing independent validation
-- Documenting findings and limitations
-- Communicating results in business terms
-- Considering responsible use and human oversight
-
-The project helped build a foundation for exploring AI prototypes, automation workflows, and data-driven solutions in enterprise environments.
-
-## 10. Data Privacy and Responsible Use
-
-This GitHub repository provides a portfolio-level summary of an academic project.
-
-To respect privacy and data-use restrictions:
-
-- Original insurance quotation datasets are not published.
-- No customer-level records or personally identifiable information are included.
-- Findings are presented only in aggregated form.
-- Original institutional or third-party datasets are not distributed.
-- Any future demonstration datasets will be synthetic or explicitly authorized for public release.
-
-**Project Status:** Completed academic analysis, independent model validation, and business recommendations.
-
-**Deployment Status:** No production deployment is claimed.
-
-## 11. Project Information
-
-**Portfolio Maintainer:** Jiming Sun
-
-**Institution:** Goodman School of Business, Brock University
-
-**Program:** MBA – Business Analytics
-
-**Project Year:** 2026
-
-**Project Type:** Academic Team Project
-
-**Individual Technical Focus:** Independent Python validation of machine learning models
-
-**Areas of Interest:**
-- Business Analytics
-- Machine Learning
-- Model Testing and Validation
-- AI-Assisted Business Solutions
-- Financial Services Analytics
-- Business Process Improvement
+- [Reusable AI Model Evaluation Skill](.github/skills/model-evaluation/SKILL.md)
+- [Skill Testing and Iteration](.github/skills/model-evaluation/TESTING.md)
+- [MCP Server Configuration](.vscode/mcp.json)
+- [Aggregated Model Metrics (JSON)](examples/model_metrics.json)
+- [Project Screenshots and Visualizations](screenshots/README.md)
 
 ---
 
-## Reusable AI Skill and MCP Integration
+# Part I: Insurance Customer Analytics
 
-As an extension of this academic project, I developed and tested a reusable AI Model Evaluation Skill using VS Code and GitHub Copilot.
+## 1. Business Problem
 
-### What I Built
+Insurance providers receive large numbers of quotation requests, but only a portion convert into purchased policies.
 
-- Created a reusable SKILL.md to guide AI-assisted model evaluation.
-- Configured a filesystem MCP server to read authorized JSON data.
-- Integrated the MCP tool with an AI-assisted evaluation workflow.
-- Tested model comparison, class imbalance interpretation, and business recommendations.
-- Refined the Skill after identifying missing sampling context.
+Following up with every quotation equally may result in inefficient use of sales and customer service resources.
 
-### Technical Demonstration
+This project explored two business questions:
 
-The AI assistant successfully retrieved aggregated model metrics through an MCP filesystem tool and consulted the project's Model Evaluation Skill.
+1. Which customer and insurance-related characteristics are associated with quotation conversion?
+2. How can predictive modelling and customer segmentation support more effective follow-up strategies?
 
-The MCP server was restricted to an authorized data directory to demonstrate controlled access.
+The project combined exploratory data analysis, clustering, machine learning, performance evaluation, and business recommendations.
 
-### Project Resources
+## 2. Dataset and Class Imbalance
 
-- [Reusable AI Skill](.github/skills/model-evaluation/SKILL.md)
-- [Skill Testing Documentation](.github/skills/model-evaluation/TESTING.md)
+The original dataset contained 101,891 auto insurance quotation records.
+
+| Original Dataset | Records | Share |
+|---|---:|---:|
+| Non-converted quotations | 79,599 | 78.12% |
+| Converted quotations | 22,292 | 21.88% |
+| Total | 101,891 | 100% |
+
+The class imbalance presented a modelling challenge because models tended to favor the majority class.
+
+The team evaluated sampling strategies and used random undersampling to create a balanced modelling sample:
+
+| Balanced Modelling Sample | Records |
+|---|---:|
+| Non-converted quotations | 22,292 |
+| Converted quotations | 22,292 |
+| Total | 44,584 |
+
+An important lesson was that model evaluation metrics calculated on a balanced sample cannot automatically be interpreted as performance on the original customer population.
+
+## 3. Machine Learning Workflow
+
+The team developed and compared three classification algorithms using Orange Data Mining.
+
+![Orange Machine Learning Workflow](screenshots/orange-workflow.png)
+
+**Figure 1. Orange Data Mining Workflow**
+
+The analytical process included:
+
+- Data exploration and preprocessing
+- Feature selection
+- Class imbalance assessment and sampling
+- Machine learning model development
+- Hyperparameter experimentation
+- Cross-validation and performance comparison
+- Business interpretation of model outputs
+
+### Models Evaluated
+
+**Decision Tree**
+
+Tested different tree configurations, including minimum leaf size, split size, maximum depth, and branching approaches.
+
+**Logistic Regression**
+
+Compared regularization methods and parameter values to balance performance, complexity, and interpretability.
+
+**Neural Network**
+
+Evaluated different hidden-layer structures, activation functions, and optimization methods.
+
+## 4. Model Performance Comparison
+
+![Machine Learning Model Comparison](screenshots/model%20compare.png)
+
+**Figure 2. Final Orange Model Evaluation Results**
+
+| Model | AUC | Accuracy | Precision | Recall | F1 | MCC |
+|---|---:|---:|---:|---:|---:|---:|
+| Decision Tree | 0.626 | 0.597 | 0.586 | 0.658 | 0.620 | 0.195 |
+| Logistic Regression | 0.634 | 0.597 | 0.588 | 0.652 | 0.618 | 0.196 |
+| Neural Network | 0.633 | 0.597 | 0.588 | 0.646 | 0.616 | 0.194 |
+
+### Key Findings
+
+- **Logistic Regression** achieved the highest AUC (0.634) and MCC (0.196).
+- **Decision Tree** achieved the highest Recall (0.658) and F1 Score (0.620).
+- **Neural Network** showed similar performance without a clear advantage over simpler approaches.
+- The differences were relatively small, and none of the models demonstrated strong predictive discrimination.
+
+### Model Recommendation
+
+Logistic Regression was selected as the preferred candidate in the academic project because of its competitive ranking performance, interpretability, and practical business considerations.
+
+However, the preferred model may depend on the business objective. For example, Decision Tree may be considered when recall at the evaluated threshold is the main priority.
+
+Additional evaluation on a representative, untouched test set would be necessary before operational use.
+
+## 5. Independent Python Validation
+
+As an individual technical contribution, I used Python to conduct a secondary validation of the three machine learning models:
+
+- Decision Tree
+- Logistic Regression
+- Neural Network
+
+The Python-based results were broadly consistent with the Orange analysis.
+
+This experience reinforced the importance of independent validation, analytical consistency, and critical review of model outputs.
+
+Similar results across tools provide an additional consistency check but do not independently establish real-world predictive reliability.
+
+## 6. Customer Segmentation
+
+Two-Step Clustering was used to identify meaningful customer segments based on demographic, driving, vehicle, and insurance relationship characteristics.
+
+![Customer Segmentation Results](screenshots/powerBI3.png)
+
+**Figure 3. Customer Segmentation and Business Insights**
+
+| Customer Segment | Customer Share | Quote Binding Rate |
+|---|---:|---:|
+| Loyal Multi-Product Commuters | 42.5% | 24.8% |
+| Young Non-Multi-Product Commuters | 23.4% | 15.7% |
+| Experienced Leisure Drivers | 34.0% | 22.3% |
+
+The analysis found a statistically significant association between customer segments and quotation conversion status (Chi-square test, p < 0.001).
+
+### Business Implications
+
+- **Segment 1:** Consider prioritized follow-up, cross-selling, and loyalty initiatives.
+- **Segment 2:** Explore introductory offers and cost-effective customer acquisition approaches.
+- **Segment 3:** Consider retention strategies and bundled insurance products.
+
+These findings demonstrate how statistical analysis can support differentiated business strategies.
+
+---
+
+# Part II: Reusable AI Skill & MCP Integration
+
+## 7. AI Prototype Overview
+
+Building on the insurance analytics project, I developed a reusable AI Model Evaluation Skill and tested its integration with an MCP-enabled AI assistant.
+
+The prototype was designed to help an AI assistant:
+
+1. Retrieve authorized model evaluation data.
+2. Compare classification models using consistent analytical criteria.
+3. Consider class imbalance and sampling methods.
+4. Explain model performance trade-offs.
+5. Recommend appropriate models based on business objectives.
+6. Highlight limitations and further validation requirements.
+
+This extension demonstrates a practical application of reusable AI instructions, tool integration, and human-guided evaluation.
+
+## 8. Reusable AI Model Evaluation Skill
+
+**Skill:** [model-evaluation](.github/skills/model-evaluation/SKILL.md)
+
+The Skill uses a structured `SKILL.md` instruction file to guide classification model assessment.
+
+### Main Capabilities
+
+- Understand the business objective and target variable.
+- Compare AUC, Accuracy, Precision, Recall, F1, and MCC.
+- Distinguish original and resampled class distributions.
+- Explain predictive performance and model trade-offs.
+- Generate structured business-oriented recommendations.
+- Identify analytical limitations and validation requirements.
+
+The Skill was designed to be reusable across similar classification problems, rather than limited to the original insurance project.
+
+## 9. MCP Tool Integration
+
+**Technology:** Visual Studio Code, GitHub Copilot, Node.js, and Model Context Protocol (MCP).
+
+I configured a filesystem MCP server to give the AI assistant access to an authorized directory containing aggregated model evaluation results.
+
+### Integration Workflow
+
+**Step 1 – User Request**
+
+The user asks the AI assistant to evaluate classification models and recommend a suitable approach.
+
+**Step 2 – MCP Data Retrieval**
+
+The AI assistant uses the filesystem MCP tool to retrieve the JSON file containing model metrics.
+
+**Step 3 – Reusable Skill Guidance**
+
+The assistant accesses the Model Evaluation Skill to apply a structured model comparison and recommendation process.
+
+**Step 4 – Business Recommendation**
+
+The assistant generates a model comparison, identifies trade-offs, and explains business implications and limitations.
+
+### Files and Configuration
+
 - [MCP Configuration](.vscode/mcp.json)
-- [Aggregated Model Metrics](examples/model_metrics.json)
+- [Model Metrics JSON](examples/model_metrics.json)
+- [Model Evaluation Skill](.github/skills/model-evaluation/SKILL.md)
 
-### Key Learning
+### Verified Local MCP Test
 
-This prototype demonstrated how reusable AI instructions, external tool connections, iterative testing, and human oversight can support business-oriented analytics.
+During testing in VS Code, the MCP server successfully initialized and exposed filesystem tools.
 
-The project remains a local prototype and has not been deployed in a production environment.
+GitHub Copilot used the MCP `read_text_file` tool to retrieve aggregated model metrics from `examples/model_metrics.json`.
 
-*This repository documents academic project methodology, summarized findings, and learning outcomes. It does not contain confidential datasets, customer-level information, or proprietary source materials.*
+The assistant also accessed the workspace Skill instructions and generated a model comparison with business recommendations.
+
+The MCP server's allowed filesystem scope was limited to the `examples` directory. An attempted MCP read of `SKILL.md` outside this scope was denied, demonstrating the configured access boundary.
+
+The Skill instructions were subsequently accessed through the editor's workspace file-reading capability without expanding the MCP server's directory permissions.
+
+This was a local prototype test, not an enterprise deployment.
+
+## 10. Testing, Feedback and Iterative Improvement
+
+The AI Skill was evaluated through multiple tests using aggregated model results.
+
+### Test 1: Initial Evaluation
+
+The AI compared three models and recommended Logistic Regression.
+
+However, it identified an apparent inconsistency between classification metrics and the original 21.88% positive-class prevalence.
+
+The missing context was that the modelling sample had been balanced through undersampling.
+
+### Improvement
+
+I refined the Skill instructions to explicitly distinguish:
+
+- Original class distribution
+- Balanced modelling sample
+- Evaluation distribution
+- Sampling methods
+- Possible metric interpretation differences
+
+### Test 2: Evaluation with Complete Sampling Context
+
+After providing the sampling information, the AI correctly distinguished the original dataset from the balanced modelling sample.
+
+It reassessed the apparent metric inconsistency and explained why the reported performance metrics were approximately consistent with a 50% positive-class evaluation distribution.
+
+### MCP and Skill Integration Test
+
+A subsequent VS Code Copilot test demonstrated:
+
+- Retrieval of JSON model metrics through MCP
+- Access to the workspace Skill instructions
+- Structured model comparison
+- Explanation of class imbalance
+- Business-oriented model recommendations
+- Identification of validation limitations
+
+A later test without explicitly naming the Skill also showed the assistant consulting `SKILL.md`. The exact automatic discovery mechanism was not independently verified.
+
+### Lessons from Iteration
+
+- AI analysis depends on complete and accurate context.
+- Structured instructions can improve analytical consistency.
+- Testing can reveal missing assumptions.
+- Human feedback remains essential when evaluating AI-generated conclusions.
+- Data access permissions should be limited to necessary resources.
+- A successful prototype still requires further testing before production use.
+
+See the [Skill Testing Documentation](.github/skills/model-evaluation/TESTING.md) for the initial testing and refinement record.
+
+## 11. Reproducing the MCP Prototype
+
+The local MCP demonstration was configured on Windows.
+
+### Prerequisites
+
+- Visual Studio Code with an MCP-capable GitHub Copilot Agent
+- Node.js and npx
+- This project repository opened as a trusted VS Code workspace
+
+### Basic Steps
+
+1. Open the project folder in VS Code.
+2. Review `.vscode/mcp.json`.
+3. Start the `insurance-model-metrics` server using VS Code's MCP server management tools.
+4. Confirm that the MCP tools are available.
+5. Open a Copilot Agent conversation.
+6. Request a model evaluation using the available MCP data tools.
+7. Review the actual tool calls to verify that the JSON file was read through MCP.
+
+The configuration is intended for a Windows environment and uses a local filesystem MCP server.
+
+The demonstration uses aggregated model metrics. It does not require access to original customer records.
+
+---
+
+# Part III: Responsible AI & Portfolio Information
+
+## 12. Data Privacy and Security
+
+This repository is a portfolio demonstration and does not distribute confidential insurance datasets.
+
+The following safeguards are applied:
+
+- No original customer-level insurance records are published.
+- No personally identifiable customer information is included.
+- Model results are presented in aggregated form.
+- The MCP server is scoped to an authorized example-data directory.
+- Testing focused on read operations without modifying source data.
+- AI-generated conclusions are subject to human review.
+
+The filesystem MCP server may support additional file operations within its authorized scope; permissions should be reviewed before allowing such operations.
+
+## 13. Project Limitations
+
+The original machine learning analysis was completed as an academic team project.
+
+The AI Skill and MCP integration are local prototypes developed for experimentation and learning.
+
+Current limitations include:
+
+- No production deployment
+- No live insurance database integration
+- No automated end-to-end regression test suite
+- No verified real-world conversion uplift
+- Further model evaluation needed on representative, untouched data
+
+The project demonstrates technical exploration and analytical decision support rather than a completed commercial AI application.
+
+## 14. My Contributions
+
+### Academic Analytics Project
+
+- Independently used Python to cross-check three machine learning model results developed in Orange.
+- Participated in a team-based business analytics project involving customer segmentation, predictive modelling, and business recommendations.
+
+### AI Skill and MCP Extension
+
+- Created a reusable Model Evaluation Skill using structured instructions.
+- Refined Skill guidance after reviewing model evaluation limitations.
+- Configured and tested a filesystem MCP server in VS Code.
+- Connected authorized aggregated model data to an AI-assisted evaluation workflow.
+- Reviewed the generated model comparisons and business recommendations.
+- Documented the testing process and technical limitations.
+
+## 15. Technologies and Skills Demonstrated
+
+**Analytics:** Python, Orange Data Mining, IBM SPSS Statistics, Microsoft Excel
+
+**Machine Learning:** Decision Tree, Logistic Regression, Neural Network, Two-Step Clustering
+
+**AI Prototyping:** Reusable AI Skills, GitHub Copilot, AI-assisted evaluation, prompt and instruction refinement
+
+**Integration:** MCP, filesystem tools, JSON, VS Code, Node.js
+
+**Professional Skills:** Problem solving, model evaluation, business analysis, documentation, testing, iterative improvement, and responsible AI practices
+
+## 16. About Me
+
+**Jiming Sun**
+
+MBA Candidate – Business Analytics  
+Goodman School of Business, Brock University  
+St. Catharines, Ontario, Canada
+
+My interests include business analytics, financial services technology, AI-enabled workflow improvement, and responsible enterprise AI applications.
+
+This portfolio reflects my interest in combining practical business knowledge with analytical and emerging AI technologies.
+
+---
+
+*This repository contains academic findings, aggregated model metrics, reusable AI instructions, and a local MCP prototype. It does not contain confidential customer data or claim production deployment.*
