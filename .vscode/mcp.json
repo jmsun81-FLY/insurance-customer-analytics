@@ -1,0 +1,16 @@
+
+{
+  "servers": {
+    "insurance-model-metrics": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}/examples"
+      ]
+    }
+  }
+}
