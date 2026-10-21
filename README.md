@@ -302,4 +302,35 @@ To respect privacy and data-use restrictions:
 
 ---
 
+## Reusable AI Skill and MCP Integration
+
+As an extension of this academic project, I developed and tested a reusable AI Model Evaluation Skill using VS Code and GitHub Copilot.
+
+### What I Built
+
+- Created a reusable SKILL.md to guide AI-assisted model evaluation.
+- Configured a filesystem MCP server to read authorized JSON data.
+- Integrated the MCP tool with an AI-assisted evaluation workflow.
+- Tested model comparison, class imbalance interpretation, and business recommendations.
+- Refined the Skill after identifying missing sampling context.
+
+### Technical Demonstration
+
+The AI assistant successfully retrieved aggregated model metrics through an MCP filesystem tool and consulted the project's Model Evaluation Skill.
+
+The MCP server was restricted to an authorized data directory to demonstrate controlled access.
+
+### Project Resources
+
+- [Reusable AI Skill](.github/skills/model-evaluation/SKILL.md)
+- [Skill Testing Documentation](.github/skills/model-evaluation/TESTING.md)
+- [MCP Configuration](.vscode/mcp.json)
+- [Aggregated Model Metrics](examples/model_metrics.json)
+
+### Key Learning
+
+This prototype demonstrated how reusable AI instructions, external tool connections, iterative testing, and human oversight can support business-oriented analytics.
+
+The project remains a local prototype and has not been deployed in a production environment.
+
 *This repository documents academic project methodology, summarized findings, and learning outcomes. It does not contain confidential datasets, customer-level information, or proprietary source materials.*
