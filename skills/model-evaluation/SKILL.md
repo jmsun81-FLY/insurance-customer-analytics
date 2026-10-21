@@ -27,6 +27,10 @@ Ask the user to provide:
    - MCC
 4. Class distribution, if available.
 5. Evaluation method, such as cross-validation or a held-out test set.
+6. Original class distribution before sampling.
+7. Evaluation class distribution and sampling method
+   (e.g., undersampling, oversampling, or class weighting).
+
 
 Use only the information provided. Do not invent missing results.
 
@@ -45,6 +49,16 @@ Identify whether the objective prioritizes:
 ### Step 2: Check Evaluation Conditions
 
 Verify whether models were compared using consistent:
+
+
+- Distinguish the original dataset class distribution
+  from the evaluation dataset class distribution.
+- Check whether class balancing or resampling
+  explains apparent differences between metrics.
+- Do not identify a metric inconsistency solely
+  because evaluation was performed on a balanced sample.
+- If sampling details are unavailable, request
+  clarification before drawing conclusions.
 
 - Data preprocessing
 - Sampling strategies
