@@ -1,0 +1,42 @@
+
+{
+  "project": "Auto Insurance Quote Conversion",
+  "original_dataset": {
+    "non_converted": 79599,
+    "converted": 22292
+  },
+  "balanced_modeling_sample": {
+    "non_converted": 22292,
+    "converted": 22292
+  },
+  "models": [
+    {
+      "name": "Decision Tree",
+      "auc": 0.626,
+      "accuracy": 0.597,
+      "precision": 0.586,
+      "recall": 0.658,
+      "f1": 0.620,
+      "mcc": 0.195
+    },
+    {
+      "name": "Logistic Regression",
+      "auc": 0.634,
+      "accuracy": 0.597,
+      "precision": 0.588,
+      "recall": 0.652,
+      "f1": 0.618,
+      "mcc": 0.196
+    },
+    {
+      "name": "Neural Network",
+      "auc": 0.633,
+      "accuracy": 0.597,
+      "precision": 0.588,
+      "recall": 0.646,
+      "f1": 0.616,
+      "mcc": 0.194
+    }
+  ],
+  "note": "Aggregated academic model results. No private customer data."
+}
